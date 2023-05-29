@@ -42,6 +42,7 @@ app.post("/user/save", async (req, res) => {
     const user = new User(req.body.user);
     console.log(user);
     await user.save();
+    console.log(user);
     res.send("Login Successful");
   } catch (e) {
     console.log(e);
